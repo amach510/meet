@@ -72,3 +72,7 @@ An app for users to meet up in cities based on events that they are interested i
     - Given the user is viewing event details,
     - When they navigate to the chart section,
     - Then they should see a chart displaying the number of upcoming events in each city.
+    - 
+
+## Serverless Function
+In the app itself, the serverless function will handle authorizing access to public calendar events from the Google Calendar API within the app. Authorization is essential for users to fetch event data displayed in the React app. These functions offer a streamlined approach compared to maintaining a full server. They will handle generating access tokens, ensuring secure interaction with the Google Calendar API. AWS Lambda is the preferred cloud-service provider for implementing these functions, enhancing the app's scalability and cost efficiency.
