@@ -29,7 +29,7 @@
         const resultElement = document.getElementById("result");
         const resultLink = document.getElementById("authURL");
         // Replace this with your own endpoint
-        const getAuthURL = "YOUR_LAMBDA_GET_AUTH_URL_ENDPOINT";
+        const getAuthURL = "https://z4b7h4ciab.execute-api.us-west-1.amazonaws.com/dev/api/get-auth-url";
   
         getAuthUrlButton.onclick = function () {
           fetch(getAuthURL)
