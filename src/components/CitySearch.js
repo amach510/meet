@@ -40,7 +40,7 @@ return (
         : null
         }
     </div>
-)
+  )
 }
 
 export default CitySearch;
