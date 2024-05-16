@@ -17,4 +17,4 @@ describe('<EventList /> component', () => {
     EventListComponent.rerender(<EventList events={allEvents} />);
     expect(EventListComponent.getAllByRole("listitem")).toHaveLength(allEvents.length);
     });
-   });
+});
