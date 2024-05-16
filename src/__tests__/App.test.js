@@ -1,17 +1,6 @@
 import { render } from '@testing-library/react';
 import App from '../App';
 
-// describe('<App /> component', () => {
-//   test('renders list of events', () => {
-//     const AppDOM = render(<App />).container.firstChild;
-//     expect(AppDOM.querySelector('#event-list')).toBeInTheDocument();
-//   });
-//   test('render CitySearch', () => {
-//     const AppDOM = render(<App />).container.firstChild;
-//     expect(AppDOM.querySelector('#city-search')).toBeInTheDocument();
-//     });
-// });
-
 describe('<App /> component', () => {
   let AppDOM;
   beforeEach(() => {
@@ -24,5 +13,8 @@ describe('<App /> component', () => {
 
   test('render CitySearch', () => {
     expect(AppDOM.querySelector('#city-search')).toBeInTheDocument();
+  });
+  test('renders number of events', () => {
+    expect(AppDOM.querySelector('#number-of-events')).toBeInTheDocument();
   });
 });
