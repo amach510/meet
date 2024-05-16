@@ -56,7 +56,7 @@ An app for users to meet up in cities based on events that they are interested i
 
   - Scenario: Show error when changing search settings offline.
     - Given the user is offline,
-    - When they attempt to change search settings (city, number of events,
+    - When they attempt to change search settings (city, number of events),
     - Then they should receive an error message.
 
 - ## Add an App Shortcut to the Home Screen
