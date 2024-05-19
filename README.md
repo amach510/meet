@@ -17,8 +17,10 @@ An app for users to meet up in cities based on events that they are interested i
    
   - Scenario: User selects a city from suggestions.
     - Given the user has or has not searched for a city based on their history,
+    - And the list of suggested cities is showing,
     - When they select a city from the suggested list,
     - Then they should be able to view events for the selected city.
+    - And the user should receive a list of upcoming events in that city.
 
 - ## Show/Hide Event Details
   - Scenario: Event element is collapsed by default.
