@@ -8,20 +8,6 @@ import mockData from './mock-data';
  * It will also remove all duplicates by creating another new array using the spread operator and spreading a Set.
  * The Set will remove all duplicates from the array.
  */
-export const extractLocations = (events) => {
-  const extractedLocations = events.map((event) => event.location);
-  const locations = [...new Set(extractedLocations)];
-  return locations;
-};
-
-// checkToken function
-const checkToken = async (accessToken) => {
-  const response = await fetch(
-    `https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=${accessToken}`
-  );
-  const result = await response.json();
-  return result;
-};
 
 // removeQuery function
 const removeQuery = () => {
@@ -49,6 +35,21 @@ const getToken = async (code) => {
   access_token && localStorage.setItem("access_token", access_token);
 
   return access_token;
+};
+
+export const extractLocations = (events) => {
+  const extractedLocations = events.map((event) => event.location);
+  const locations = [...new Set(extractedLocations)];
+  return locations;
+};
+
+// checkToken function
+const checkToken = async (accessToken) => {
+  const response = await fetch(
+    `https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=${accessToken}`
+  );
+  const result = await response.json();
+  return result;
 };
 
 // This function will fetch the list of all events
